@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">This is a hidden title!</h1>
+    <button onclick="process()">Trigger</button>
+    <button onclick="ChangeColor()">Change</button>
+    <button onclick="updateText()">Update</button>
+
+    <script>
+        alert("Onloading Page");
+
+        function process() {
+            let dom = document.getElementById("title");
+            dom.style.display = 'block'; // Show the hidden element
+        }
+
+        function ChangeColor() {
+            let dom = document.getElementById("title");
+            dom.style.color = 'red'; // Change the color to red
+        }
+
+        function updateText(){
+            let dom = document.getElementById("title"); // Define the dom element here
+            dom.innerHTML = "Hello JavaScript"; // Update the text
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Position Examples</title>
+    <style>
+        /* Common button styling */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        /* Static Position (Default) */
+        .static-btn {
+            position: static; /* This is the default */
+            background-color: lightblue;
+        }
+
+        /* Relative Position */
+        .relative-btn {
+            position: relative;
+            top: 20px;  /* Move down 20px from its normal position */
+            left: 30px; /* Move 30px to the right from its normal position */
+            background-color: lightgreen;
+        }
+
+        /* Absolute Position */
+        .absolute-btn {
+            position: absolute;
+            top: 50px;  /* Absolute position relative to nearest ancestor or viewport */
+            right: 20px;
+            background-color: lightcoral;
+        }
+
+        /* Fixed Position */
+        .fixed-btn {
+            position: fixed;
+            bottom: 10px;  /* Sticks to the bottom-right corner */
+            right: 10px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* Sticky Position */
+        .sticky-btn {
+            position: -webkit-sticky; /* For older browsers */
+            position: sticky;
+            top: 0; /* Sticks at the top of the page when you scroll */
+            background-color: lightpink;
+        }
+
+        /* Container for sticky button to scroll */
+        .content {
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Button Position Examples</h2>
+
+    <!-- Static Button -->
+    <button class="static-btn">Static Button</button>
+
+    <!-- Relative Button -->
+    <button class="relative-btn">Relative Button</button>
+
+    <!-- Absolute Button -->
+    <button class="absolute-btn">Absolute Button</button>
+
+    <!-- Fixed Button -->
+    <button class="fixed-btn">Fixed Button</button>
+
+    <!-- Sticky Button -->
+    <button class="sticky-btn">Sticky Button</button>
+
+    <div class="content">
+        <p>Scroll down to see the sticky button in action.</p>
+    </div>
+
+</body>
+</html>

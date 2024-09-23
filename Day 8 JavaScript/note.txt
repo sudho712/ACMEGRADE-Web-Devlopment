@@ -1,0 +1,20 @@
+Java script
+Input Event 
+Events 
+    Mouse C;lick 
+    Hover
+    Move
+Keyboard
+    Type
+    press a Keyboard
+
+Action 
+    Chane color, Size 
+    Mainipulating
+        change color
+        Show Hide
+    
+    cretating
+    Redectring
+
+Dom
