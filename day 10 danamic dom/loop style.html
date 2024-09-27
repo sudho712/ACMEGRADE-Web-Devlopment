@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        padding: 10px;
+        background-color: rgb(221, 14, 14);
+        margin: 5px;
+        /* border-radius: 50%; */
+      }
+
+      .special { /* Corrected the spelling */
+        padding: 10px;
+        background-color: rgb(9, 49, 226);
+        margin: 5px;
+        border-radius: 50%;
+      }
+
+      .default {
+        padding: 10px;
+        background-color: rgb(21, 19, 20);
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent"></div>
+    <script>
+      let parentObj = document.getElementById("parent"); // Line 12
+      for (let i = 0; i <= 100; i++) { // Line 13
+        let className = "default"; // Line 14
+        if (i % 2 == 0) { // Line 15
+          className = "special"; // Line 16 (spelling corrected)
+        }
+        parentObj.innerHTML += `<button class='btn ${className}'>${i}</button>`; // Line 18
+      }
+    </script>
+  </body>
+</html>
