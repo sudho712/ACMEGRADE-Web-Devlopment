@@ -8,15 +8,14 @@
 <body>
     <button onclick="addElement()">Add Title</button>
     <div id="parent"></div>
-
     <script>
-        parentObj=document.getElementById("parent")
-        cout=1
+        let parentObj = document.getElementById("parent"); // 12
+        let count = 1; // 13
+
         function addElement()
         {
-            parentObj.innerHTML="<h1> New Title"
-                count++
-                
+            parentObj.innerHTML = "<h1> New Title " + count + "</h1>"; // 16
+                count++                
         }
     </script>
 </body>
