@@ -6,8 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Adding the Elemen!</h1>
+    <div id="parent"></div>
     <script>
-        h1obj=document,createElement        
+         parentObj = document.getElementById("parent");  // Correctly reference the parent div
+        h1Obj = document.createElement("h1");          // Create a new h1 element
+        h1Obj.innerHTML = "I am an Element";               // Set the inner HTML of the h1 element
+
+        console.log(parentObj);                            // Corrected console.lg() to console.log()
+
+        parentObj.appendChild(h1Obj);                      // Append the new h1 element to the parent div
     </script>
 </body>
 </html>
