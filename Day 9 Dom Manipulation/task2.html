@@ -10,6 +10,7 @@
     <input type="number" placeholder="Enter the age" id="age">
 
     <button onclick="calc()">Check</button>
+    <h1>Result</h1>
     <h1 id="output"></h1>
     <script>
         let nameInput = document.getElementById("name");
@@ -22,8 +23,10 @@
             
             if (age >= 18) {
                 output.innerHTML = name + " is a major";
+                output.style.color = "green"; // Change text color to green
             } else {
                 output.innerHTML = name + " is a minor";
+                output.style.color = "red"; // Change text color to red
             }
         }
     </script>
