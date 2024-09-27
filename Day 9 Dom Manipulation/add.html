@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Addition</title>
-</head>
-<body>
-    <input type="text" placeholder="Enter a" id="a">
-    <input type="text" placeholder="Enter b" id="b">
+  </head>
+  <body>
+    <input type="text" placeholder="Enter a" id="a" />
+    <input type="text" placeholder="Enter b" id="b" />
     <button onclick="process()">Add</button>
+    <h1 id="output">0</h1>
 
     <script>
-             a = document.getElementById("a")
-             b = document.getElementById("b")
-
-             function process()
-             {
-                res=a.value+b.value
-                console.log("result=",res)
-             }
-
-            
+      a = document.getElementById("a");
+      b = document.getElementById("b");
+      outputObj=document.getElementById("output")
+      
+      function process() {
+        res = a.value + b.value;
+        console.log("result=", res);
+      }
     </script>
-</body>
+  </body>
 </html>

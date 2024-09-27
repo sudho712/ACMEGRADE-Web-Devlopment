@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uname" placeholder="username">
+    <input type="password" id="upass" placeholder="Enter password">
+    <button onclick="checkUser()">Login</button>
+
+    <script>
+        unameObj=document.getElementById("uname")
+        upassObj=document.getElementById("upass")
+
+        function checkUser()
+        {
+            if(unameObj.value=="acme" && upassObj.value=="intern")
+        {
+            alert("login Sucess")
+        }
+        else{
+            alert("login failed")
+        }
+        }
+    </script>
+</body>
+</html>
