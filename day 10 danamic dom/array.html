@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .name{
+            background-color: rgb(255, 128, 0);
+            color: aliceblue;
+            width: fit-content;
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <div id="parent"></div>
@@ -13,7 +23,7 @@
         let names = ["a", "b", "c", "d", "e"]; // Declare names with 'let'
 
         for (let i = 0; i < names.length; i++) { // Declare 'i' with 'let'
-            parentObj.innerHTML += `<div>${names[i]}</div>`; // Use backticks for template literals
+            parentObj.innerHTML += `<div class="name">${names[i]}</div>`; // Use backticks for template literals
         }
     </script>
 </body>
