@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login page validation</h1>
+    <input type="text" id="uname" placeholder="username" />
+    <input type="password" id="upass" placeholder="Enter password" />
+    <button onclick="login()">Login</button>
+
+    <script>
+      let unameObj = document.getElementById("uname");
+      let upassObj = document.getElementById("upass");
+
+      function login() {
+        let validationStatus = validate();
+        if (validationStatus) {
+          let userStatus = checkUser();
+          if (userStatus) {
+            redirection("https://www.google.com"); // Corrected URL (Line 18)
+          } else {
+            alert("Invalid ID and password");
+          }
+        } else {
+          alert("Input field can't be empty");
+        }
+      }
+
+      function validate() {
+        if (unameObj.value.length == 0 || upassObj.value.length == 0) { // Corrected from `upass` to `upassObj` (Line 27)
+          return false;
+        }
+        return true;
+      }
+
+      function checkUser() {
+        if (unameObj.value == "acme" && upassObj.value == "intern") {
+          return true;
+        }
+        return false;
+      }
+
+      function redirection(path) {
+        location.href = path;
+      }
+    </script>
+  </body>
+</html>
