@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Addition</title>
 </head>
 <body>
-    <input type="text" placeholder="Enter a" id="ip1" >
-    <input type="text" placeholder="Enter b" id="ip2" >
+    <input type="text" placeholder="Enter a" id="a">
+    <input type="text" placeholder="Enter b" id="b">
+    <button onclick="process()">Add</button>
 
     <script>
-        
-        function process(){
+             a = document.getElementById("a")
+             b = document.getElementById("b")
 
-        }
+             function process()
+             {
+                res=a.value+b.value
+                console.log("result=",res)
+             }
+
+            
     </script>
 </body>
 </html>
