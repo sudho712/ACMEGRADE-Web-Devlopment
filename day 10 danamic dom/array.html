@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent"></div>
+
+    <script>
+        let parentObj = document.getElementById("parent"); // Declare parentObj with 'let'
+        let names = ["a", "b", "c", "d", "e"]; // Declare names with 'let'
+
+        for (let i = 0; i < names.length; i++) { // Declare 'i' with 'let'
+            parentObj.innerHTML += `<div>${names[i]}</div>`; // Use backticks for template literals
+        }
+    </script>
+</body>
+</html>
