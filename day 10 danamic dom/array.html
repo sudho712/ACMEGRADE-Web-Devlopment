@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .name{
+        .name {
             background-color: rgb(255, 128, 0);
             color: aliceblue;
             width: fit-content;
             display: inline-block;
             margin: 10px;
             padding: 20px;
+            cursor: pointer; /* Makes the div look clickable */
+            transition: transform 0.3s; /* Smooth rotation effect */
         }
     </style>
 </head>
@@ -19,11 +21,17 @@
     <div id="parent"></div>
 
     <script>
-        let parentObj = document.getElementById("parent"); // Declare parentObj with 'let'
-        let names = ["a", "b", "c", "d", "e"]; // Declare names with 'let'
+        let parentObj = document.getElementById("parent");
+        let names = ["a", "b", "c", "d", "e"];
 
-        for (let i = 0; i < names.length; i++) { // Declare 'i' with 'let'
-            parentObj.innerHTML += `<div class="name">${names[i]}</div>`; // Use backticks for template literals
+        for (let i = 0; i < names.length; i++) {
+            // Add an onclick attribute to call the update function when the element is clicked
+            parentObj.innerHTML += `<div id='${i}' class="name" onclick="update(${i})">${names[i]}</div>`;
+        }
+
+        function update(id) {
+            let obj = document.getElementById(id); // Get the clicked element using its id
+            obj.style.transform = 'rotate(45deg)'; // Rotate the element by 45 degrees
         }
     </script>
 </body>
