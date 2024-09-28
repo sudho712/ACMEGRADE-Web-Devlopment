@@ -3,40 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product List</title>
     <style>
-        
-        .card{
+        .card {
             margin: 10px;
             width: 250px;
             background-color: rgb(21, 23, 23);
             color: rgb(238, 238, 246);
             display: inline-block;
+            padding: 10px;
         }
-        .name{
+        .name {
             font-size: 24px;
         }
-        .price{            
+        .price {
             font-size: 26px;
             color: gold;
         }
-        .price::after{
-            content:"rs";
+        .price::after {
+            content: " rs";
             font-size: 12px;
             font-style: italic;
         }
-        .details{
+        .details {
             margin-top: 10px;
             font-size: 18px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
-        .action{
+        .action {
             text-align: center;
-            margin-top: 10px;            
+            margin-top: 10px;
         }
-
-        .action button{
+        .action button {
             padding: 10px;
         }
     </style>
@@ -44,69 +42,52 @@
 <body>
 
     <div id="parent"></div>
+
     <script>
         let parentObj = document.getElementById("parent");
         let product = [
-            {
-                name: "chair",
-                price: "1222",
-                details: "this is the chair"
-            },
-            {
-                name: "keyboard",
-                price: "122",
-                details: "this is the chair"
-            },
-            {
-                name: "dell",
-                price: "1222",
-                details: "this is the chair"
-            },
-            {
-                name: "Mobile",
-                price: "1222",
-                details: "this is the Mobile"
-            },
-            {
-                name: "Headphones",
-                price: "699",
-                details: "These are noise-cancelling headphones"
-            },
-            {
-                name: "Desk Lamp",
-                price: "599",
-                details: "This is an LED desk lamp"
-            },
-            {
-                name: "Mouse",
-                price: "199",
-                details: "This is a wireless mouse"
-            },
-            {
-                name: "Monitor",
-                price: "8999",
-                details: "This is a 24-inch monitor"
-            }
+            { name: "chair", price: "1222", details: "This is the chair" },
+            { name: "keyboard", price: "122", details: "This is a keyboard" },
+            { name: "dell", price: "1222", details: "This is a Dell laptop" },
+            { name: "Mobile", price: "1222", details: "This is a Mobile" },
+            { name: "Headphones", price: "699", details: "Noise-cancelling headphones" },
+            { name: "Desk Lamp", price: "599", details: "This is an LED desk lamp" },
+            { name: "Mouse", price: "199", details: "This is a wireless mouse" },
+            { name: "Monitor", price: "8999", details: "24-inch monitor" }
         ];
 
-        for (let i = 0; i < product.length; i++) {
-            parentObj.innerHTML += `
-                <div class="card">
-                    <div class="name">${product[i].name}</div>
-                    <div class="price">${product[i].price}</div>
-                    <div class="details">${product[i].details}</div>
-                    <div>
-                        <div class="action">
-                            <button onclick="deleteProduct(${i})">Delete</button>
+        // Function to render products
+        function renderProducts() {
+            parentObj.innerHTML = ""; // Clear the parent div
+            for (let i = 0; i < product.length; i++) {
+                parentObj.innerHTML += `
+                    <div class="card">
+                        <div class="name">${product[i].name}</div>
+                        <div class="price">${product[i].price}</div>
+                        <div class="details">${product[i].details}</div>
+                        <div>
+                            <div class="action">
+                                <button onclick="deleteProduct(${i})">Delete</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            `;
+                `;
+            }
         }
 
+        // Function to delete a product
         function deleteProduct(index) {
-            alert(product[index].name);  // This will alert the name of the product at the given index.
+            const confirmDelete = confirm(`Are you sure you want to delete "${product[index].name}"?`);
+            if (confirmDelete) {
+                product.splice(index, 1); // Remove the product from the array
+                alert(`"${product[index].name}" has been deleted.`); // Show alert confirming deletion
+                renderProducts(); // Re-render the product list
+            }
         }
+
+        // Initial rendering of products
+        renderProducts();
     </script>
+
 </body>
 </html>
