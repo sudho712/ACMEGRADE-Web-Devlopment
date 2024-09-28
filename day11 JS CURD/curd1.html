@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            margin: 10px;
+            width: 250px;
+            background-color: rgb(21, 23, 23);
+            color: rgb(238, 238, 246);
+        }
+        .name{
+            font-size: 24px;
+        }
+        .price{            
+            font-size: 26px;
+            color: gold;
+        }
+        .price::after{
+            content:"rs";
+            font-size: 12px;
+            font-style: italic;
+        }
+        .details{
+            margin-top: 10px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--  git curd operation -->
+
+    <div id="parent"></div>
+    <script>
+        parentObj=document.getElementById("parent")
+        product=[
+            {
+                name:"chair",
+                price:"1222",
+                details:"this is the chair"
+            },
+
+            {
+                name:"keyboard",
+                price:"122",
+                details:"this is the chair"
+            },
+
+            {
+                name:"dell",
+                price:"1222",
+                details:"this is the chair"
+            },
+
+            {
+                name:"Mobile",
+                price:"1222",
+                details:"this is the Mobile"
+            },
+        ]
+
+        for (let i = 0; i < product.length; i++) {
+    parentObj.innerHTML += `
+        <div class="card">
+            <div class="name">${product[i].name}</div>
+            <div class="price">${product[i].price}</div>
+            <div class="details">${product[i].details}</div>
+        </div>
+    `;
+}
+
+    </script>
+</body>
+</html>
