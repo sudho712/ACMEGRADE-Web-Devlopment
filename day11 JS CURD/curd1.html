@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
         .card{
             margin: 10px;
             width: 250px;
             background-color: rgb(21, 23, 23);
             color: rgb(238, 238, 246);
+            display: inline-block;
         }
         .name{
             font-size: 24px;
@@ -28,50 +30,83 @@
             font-size: 18px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+
+        .action{
+            text-align: center;
+            margin-top: 10px;            
+        }
+
+        .action button{
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <!--  git curd operation -->
 
     <div id="parent"></div>
     <script>
-        parentObj=document.getElementById("parent")
-        product=[
+        let parentObj = document.getElementById("parent");
+        let product = [
             {
-                name:"chair",
-                price:"1222",
-                details:"this is the chair"
+                name: "chair",
+                price: "1222",
+                details: "this is the chair"
             },
-
             {
-                name:"keyboard",
-                price:"122",
-                details:"this is the chair"
+                name: "keyboard",
+                price: "122",
+                details: "this is the chair"
             },
-
             {
-                name:"dell",
-                price:"1222",
-                details:"this is the chair"
+                name: "dell",
+                price: "1222",
+                details: "this is the chair"
             },
-
             {
-                name:"Mobile",
-                price:"1222",
-                details:"this is the Mobile"
+                name: "Mobile",
+                price: "1222",
+                details: "this is the Mobile"
             },
-        ]
+            {
+                name: "Headphones",
+                price: "699",
+                details: "These are noise-cancelling headphones"
+            },
+            {
+                name: "Desk Lamp",
+                price: "599",
+                details: "This is an LED desk lamp"
+            },
+            {
+                name: "Mouse",
+                price: "199",
+                details: "This is a wireless mouse"
+            },
+            {
+                name: "Monitor",
+                price: "8999",
+                details: "This is a 24-inch monitor"
+            }
+        ];
 
         for (let i = 0; i < product.length; i++) {
-    parentObj.innerHTML += `
-        <div class="card">
-            <div class="name">${product[i].name}</div>
-            <div class="price">${product[i].price}</div>
-            <div class="details">${product[i].details}</div>
-        </div>
-    `;
-}
+            parentObj.innerHTML += `
+                <div class="card">
+                    <div class="name">${product[i].name}</div>
+                    <div class="price">${product[i].price}</div>
+                    <div class="details">${product[i].details}</div>
+                    <div>
+                        <div class="action">
+                            <button onclick="deleteProduct(${i})">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
 
+        function deleteProduct(index) {
+            alert(product[index].name);  // This will alert the name of the product at the given index.
+        }
     </script>
 </body>
 </html>
