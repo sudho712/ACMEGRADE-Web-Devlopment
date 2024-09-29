@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function normal() {
+        console.log("I am a normal function");
+      }
+      anon = function () {
+        console.log("I am anonoyms");
+      };
+      anon2 = function () {
+        console.log("I am anons function2");
+      };
+      function highOrder(fn) {
+        pass = prompt("Enter password to execute");
+        if (pass == "acme") {
+          fn();
+        }
+      }
+      normal();
+      highOrder(anon);
+    </script>
+  </body>
+</html>
+<!-- 
+This is th applet password login 
+-->
