@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server</title>
+</head>
+<body>
+    <h1>Title 1</h1>
+    <!-- Corrected class attribute -->
+    <h1 class="group1">Title 2</h1>
+    <h1 id="demo">Title 3</h1>
+
+    <!-- Corrected class attribute -->
+    <button type="text" class="group1">Login</button>
+
+    <script>
+        // Corrected getElementsByTagName
+        h1ObjArray = document.getElementsByTagName("h1");
+
+        // Get the specific element by id
+        h1Obj = document.getElementById("demo");
+
+        console.log("h1ObjArray=", h1ObjArray);
+
+        // Corrected variable name and array access
+        h1ObjArray[2].innerHTML = "I am changed";
+        h1Obj.style.color = "red";
+
+        // Corrected getElementsByClassName
+        group1ObjArray = document.getElementsByClassName("group1");
+        console.log("group1ObjArray=", group1ObjArray);
+    </script>
+</body>
+</html>
