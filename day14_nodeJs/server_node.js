@@ -3,7 +3,7 @@ var http = require("http");
 var server = http.createServer((req, res) => {
     console.log("URL=", req.url);
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello! You accessed: " + req.url);
+    res.end("<h1>I am nnode response</h1>")
 });
 
 server.listen(3000, () => {
