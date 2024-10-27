@@ -1,0 +1,55 @@
+E-commerce SAAS
+MVP Minimum value product
+USP Unique Selling product
+
+Roles And Responsibility
+
+Super Admin
+    Develop And Maintenance the Platform
+    Manage users
+    Onboarding vender by verifying kyc
+    Manage Gateway of payment
+    Dashboard for vender
+
+Seller
+    Authentication/KYC MVP
+    SellingLogin
+
+    manage products  MVP
+    add
+    view
+    Edit
+    Delete
+
+    Manage order
+    view
+    Edit
+    Mark As delivered
+
+Buyer/Customer
+    Authentication  MVP
+    Manage products
+    View products  MVP
+    Compare Products
+
+    manage cart
+        Add
+        view
+        Edit
+        delete
+    
+    place order
+        payment gateway
+        COD  MVP
+    
+    cancel order
+    Track order
+    Review & Rating
+    Return
+
+    
+
+customer Care
+Delivery partner
+Accountant
+

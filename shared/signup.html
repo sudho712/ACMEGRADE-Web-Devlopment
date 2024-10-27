@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+    <form action="signup.php" method="post" class="bg-warning p-3 w-50">
+        <h3 class="text-center">Sign up here........</h3>
+        <input class="form-control mt-2"type="text" placeholder="username" name="username">
+        <input class="form-control mt-2" type="password" placeholder="password" name="password">
+
+        <select class="form-control mt-2" name="usertype">
+            <option value="seller">Seller</option>
+            <option value="buyer">Buyer</option>
+        </select>
+        
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">signup</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
