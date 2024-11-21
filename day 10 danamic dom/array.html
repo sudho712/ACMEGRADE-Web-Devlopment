@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name {
+            background-color: rgb(255, 128, 0);
+            color: aliceblue;
+            width: fit-content;
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            cursor: pointer; /* Makes the div look clickable */
+            transition: transform 0.3s; /* Smooth rotation effect */
+        }
+    </style>
+</head>
+<body>
+    <div id="parent"></div>
+
+    <script>
+        let parentObj = document.getElementById("parent");
+        let names = ["a", "b", "c", "d", "e"];
+
+        for (let i = 0; i < names.length; i++) {
+            // Add an onclick attribute to call the update function when the element is clicked
+            parentObj.innerHTML += `<div id='${i}' class="name" onclick="update(${i})">${names[i]}</div>`;
+        }
+
+        function update(id) {
+            let obj = document.getElementById(id); // Get the clicked element using its id
+            obj.style.transform = 'rotate(45deg)'; // Rotate the element by 45 degrees
+        }
+    </script>
+</body>
+</html>

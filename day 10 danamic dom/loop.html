@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .btn{
+            padding: 10px;
+            background-color: rgb(221, 14, 14);
+            margin: 5px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="addElement()">Add Title</button>
     <div id="parent"></div>
-
     <script>
         parentObj=document.getElementById("parent")
-        function addElement()
-        {
-            parentObj.innerHTML=parentObj.innerHTML+"<h1> New Title"
-                
-        }
+        for(i=0; i<=100; i++)
+    {
+        parentObj.innerHTML += `<button class='btn'>${i}</button>`;
+
+
+    }
     </script>
 </body>
 </html>
